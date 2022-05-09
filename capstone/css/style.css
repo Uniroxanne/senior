@@ -1,9 +1,9 @@
-@charet "UTF-8";
+@charset "UTF-8";
 
 /*
 ----------------------*/
 html{
-  font-size: 100;
+  font-size: 100%;
 }
 body{
   font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "Apple SD Gothic Neo", sans-serif;
@@ -11,31 +11,32 @@ body{
   color: #432;
 }
 a {
-  text-docoration: none;
+  text-decoration: none;
 }
 img { 
-  max-width: 100;
+  max-width: 100%;
 }
 
 /* HEADER
 -----------------------*/
 .logo {
-  width: 210px;
-  margin-top: 14px;
-}
-nav ul {
-    width: 100%;
-    background-color: rgba(44, 42, 39, 0.983);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline-block;
+  width: 300px;
+  margin-top: 80px;
 }
 .dropdown {
-    position: relative;
+    /*font-size:1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;*/
+    list-style-type: none;
+    margin-top: 100px;
+    /* padding: 0%; */
+    background-color: rgba(44, 42, 39, 0.983);
+    /* position: relative; */
 }
+/* .main-nav li {
+    margin-left: 36px;
+} */
 .dropdown-menu {
     color: white;
     padding: 16px;
@@ -48,7 +49,6 @@ nav ul li {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -58,7 +58,7 @@ nav ul li {
 .dropdown-content {
     display: none;
 }
-.dropdown-menu:hover:not(.home){
+.dropdown-menu:hover {
     background-color: darkorange;
     color: white;
 }
@@ -66,4 +66,86 @@ nav ul li {
     display: block;
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
-  
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/*입력양식*/
+form div {
+    margin-bottom: 14px;
+}
+lable {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+input[type="text"],
+textarea {
+    background: rgba(255,255,255,.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+input[type="text"] {
+    width: 100%;
+    max-width: 240px;
+}
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+/*버튼*/
+.button {
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: #0090aa;
+}
+.submit-btn {
+    display: flex;
+    text-transform: uppercase;
+    list-style: none;
+}
+.submit-btn li {
+    margin-left: 36px;
+}
+/*배경*/
+#home {
+    background-image: url(../images/main-bg.png);
+    min-height: 100vh;
+}
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+/*메일*/
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+.mail {
+    margin: 10px;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
